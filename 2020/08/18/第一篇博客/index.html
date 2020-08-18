@@ -11,7 +11,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <title>
-    第一篇博客-Hexo的搭建与使用 |
+    我的第一篇博客-Hexo的搭建与使用（持续更新中） |
     
     Hexo</title>
   
@@ -41,7 +41,7 @@
                 
   
     <h1 class="article-title" itemprop="name">
-      第一篇博客-Hexo的搭建与使用
+      我的第一篇博客-Hexo的搭建与使用（持续更新中）
     </h1>
   
   
@@ -55,7 +55,7 @@
                 
                     <div class="article-meta">
                         <a href="/2020/08/18/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" class="article-date">
-  <time datetime="2020-08-18T07:00:00.000Z" itemprop="datePublished">2020-08-18</time>
+  <time datetime="2020-08-18T08:00:00.000Z" itemprop="datePublished">2020-08-18</time>
 </a>
                             
                     </div>
@@ -89,7 +89,8 @@
 <li>注册账户</li>
 <li>（推荐）配置SSH：点右上角头像 - Settings - SSH and GPG Keys - SSH keys</li>
 </ol>
-<h3 id="3-装Node-js"><a href="#3-装Node-js" class="headerlink" title="3.装Node.js"></a>3.装Node.js</h3><p><a target="_blank" rel="noopener" href="https://nodejs.org/zh-cn/">Node.js</a>是一个基于 Chrome V8 引擎的 JavaScript 运行环境。它包含 npm 包管理器。</p>
+<h3 id="3-安装Node-js"><a href="#3-安装Node-js" class="headerlink" title="3.安装Node.js"></a>3.安装Node.js</h3><p><a target="_blank" rel="noopener" href="https://nodejs.org/zh-cn/">Node.js</a>是一个基于 Chrome V8 引擎的 JavaScript 运行环境。它包含 npm 包管理器。</p>
+<h3 id="4-（推荐）安装Typora"><a href="#4-（推荐）安装Typora" class="headerlink" title="4.（推荐）安装Typora"></a>4.（推荐）安装Typora</h3><p><a target="_blank" rel="noopener" href="https://www.typora.io/">Typora</a>一个优美简洁的Markdown文本编辑器。</p>
 <h2 id="二、安装Hexo"><a href="#二、安装Hexo" class="headerlink" title="二、安装Hexo"></a>二、安装Hexo</h2><p><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">Hexo</a>是一个快速、简洁且高效的博客框架，且是静态的，可以搭建在<a target="_blank" rel="noopener" href="https://pages.github.com/">Github Pages</a>（一个基于Github仓库所建立的个人网站）上。</p>
 <p>安装要使用命令行工具，<strong>CMD</strong>或<strong>Git Bash</strong>都可以。</p>
 <ol>
@@ -144,31 +145,38 @@
 </li>
 <li><p>（可选）建立一个临时的本地服务器，使你可以通过网址<code>http://localhost:4000</code>访问博客：</p>
 <p><code>hexo server</code></p>
-<p>按<code>ctrl+c</code>终止</p>
+<p>按<code>ctrl+c</code>可终止。</p>
 </li>
 <li><p>发布文章到博客网站上：</p>
-<p>先<code>hexo clean</code>；（再<code>hexo g</code>，即<code>hexo generate</code>）；后<code>hexo d，</code>即<code>hexo deploy</code></p>
+<p>先<code>hexo clean</code>；</p>
+<p>（再<code>hexo g</code>，即<code>hexo generate</code>）；</p>
+<p>后<code>hexo d，</code>即<code>hexo deploy</code>。</p>
 </li>
 </ul>
-<h3 id="2-主题"><a href="#2-主题" class="headerlink" title="2.主题"></a>2.主题</h3><p>官网有<a target="_blank" rel="noopener" href="https://hexo.io/themes/">主题</a>专栏。选一款喜欢的主题，点它的名字即可进入其Github界面，里面一般都会有安装说明。</p>
+<h3 id="2-安装主题"><a href="#2-安装主题" class="headerlink" title="2.安装主题"></a>2.安装主题</h3><p>官网有<a target="_blank" rel="noopener" href="https://hexo.io/themes/">主题</a>专栏。选一款喜欢的主题，点它的名字即可进入其Github界面，里面一般都会有安装说明。</p>
 <p>其实就是在blog目录下输一行命令：<code>git clone https://github.com/xx（用户名）/xxx（主题名）.git themes/xxx（主题名）</code>；</p>
 <p>然后到_config.yml文件中找到”theme”并修改：<code>theme: xxx（主题名，默认为landscape）</code></p>
 <p>推荐：</p>
-<p>我目前用的主题是<a target="_blank" rel="noopener" href="https://github.com/zhwangart/hexo-theme-ocean">Ocean</a>，看起来不错；有<a target="_blank" rel="noopener" href="https://zhwangart.github.io/2018/11/30/Ocean/">中文文档</a>，关于安装和使用的说明很详细了。</p>
-<h3 id="3-插件"><a href="#3-插件" class="headerlink" title="3.插件"></a>3.插件</h3><p>官网有<a target="_blank" rel="noopener" href="https://hexo.io/plugins/">插件</a>专栏。</p>
+<p>我目前用的主题是<a target="_blank" rel="noopener" href="https://github.com/zhwangart/hexo-theme-ocean">Ocean</a>，看起来很棒；有<a target="_blank" rel="noopener" href="https://zhwangart.github.io/2018/11/30/Ocean/">中文文档</a>，关于安装和使用的说明很详细了。</p>
+<h3 id="3-安装插件"><a href="#3-安装插件" class="headerlink" title="3.安装插件"></a>3.安装插件</h3><p>官网有<a target="_blank" rel="noopener" href="https://hexo.io/plugins/">插件</a>专栏。</p>
 <p>安装：在blog目录下输：<code>npm install xxx（插件名） --save</code>。</p>
 <p>推荐：</p>
-<h3 id="4-配置文件-config-yml"><a href="#4-配置文件-config-yml" class="headerlink" title="4.配置文件_config.yml"></a>4.配置文件_config.yml</h3><p>该文件在<code>C:\用户\xxx（你的系统用户名）\blog</code>目录下，可以用于配置博客。</p>
-<h2 id="四、错误汇总"><a href="#四、错误汇总" class="headerlink" title="四、错误汇总"></a>四、错误汇总</h2><p>这里汇总一下博客搭建和使用过程中遇到的错误。</p>
+<h3 id="4-修改配置文件-config-yml"><a href="#4-修改配置文件-config-yml" class="headerlink" title="4.修改配置文件_config.yml"></a>4.修改配置文件_config.yml</h3><p>该文件在<code>C:\用户\xxx（你的系统用户名）\blog</code>目录下，可以用于配置博客。</p>
+<h2 id="四、错误汇总"><a href="#四、错误汇总" class="headerlink" title="四、错误汇总"></a>四、错误汇总</h2><p>这里汇总一下博客搭建和使用过程中遇到的错误和问题。</p>
 <h3 id="1-YAMLException-can-not-read-a-block-mapping-entry-a-multiple-key-may-not-be-an-implicit-key-at-line-xx-column-xx"><a href="#1-YAMLException-can-not-read-a-block-mapping-entry-a-multiple-key-may-not-be-an-implicit-key-at-line-xx-column-xx" class="headerlink" title="1.YAMLException: can not read a block mapping entry; a multiple key may not be an implicit key at line xx, column xx"></a>1.YAMLException: can not read a block mapping entry; a multiple key may not be an implicit key at line xx, column xx</h3><img src="/2020/08/18/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/Snipaste_2020-08-16_18-43-00.png" class="" title="Snipaste_2020-08-16_18-43-00">
 
 <p>执行<code>hexo deploy</code>时报错。从图上第二行可以看出，108行有问题，那么就去_config.yml文件中找到这一行，然后发现是这一行中的冒号<code>:</code>后面忘加空格了。</p>
 <p>解决方法：冒号后面补上空格。记住：该文件中所有的<strong>冒号后面都要加个空格</strong>。</p>
 <h3 id="2-网站上无法显示出引用的本地图片"><a href="#2-网站上无法显示出引用的本地图片" class="headerlink" title="2.网站上无法显示出引用的本地图片"></a>2.网站上无法显示出引用的本地图片</h3><img src="/2020/08/18/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/Snipaste_2020-08-18_08-51-01.png" class="" title="Snipaste_2020-08-18_08-51-01">
 
-<p>解决方法：安装<a target="_blank" rel="noopener" href="https://github.com/cocowool/hexo-image-link">hexo-image-link</a>插件：<code>npm install hexo-image-link --save</code>。</p>
-<p>遗留问题：我发现用Typora缩放插入的图片时，markdown语法会发生改变，如下图。这种情况下这个插件似乎就没有用了，该图片还是显示不出来。</p>
+<p>解决方法：</p>
+<p>首先，修改_config.yml文件，把其中的“post_asset_folder”设为true：<code>post_asset_folder: true</code>。这样，每次<code>hexo new 一篇新文章</code>的时候，不仅会在<code>source\_posts</code>中创建 <em>一篇新文章.md</em> 文件，还会同时创建同名文件夹。可以把要用到的图片先复制到这个文件夹中，再插入到文章里。当然，对于在设置<code>post_asset_folder</code>之前就创建的文章，自己手动建一个同名文件夹即可。</p>
+<p>安装<a target="_blank" rel="noopener" href="https://github.com/cocowool/hexo-image-link">hexo-image-link</a>插件：<code>npm install hexo-image-link --save</code>。</p>
+<p><strong>遗留问题</strong>：我发现用Typora缩放插入的图片时，markdown语法会发生改变，如下图。这种情况下这个插件似乎就没有用了，这种图片还是显示不出来。所以我只好暂时不用缩放功能。</p>
 <img src="/2020/08/18/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/Snipaste_2020-08-18_14-22-00.png" class="" title="Snipaste_2020-08-18_14-22-00">
+
+<p>正常的语法格式应为：</p>
+<img src="/2020/08/18/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/Snipaste_2020-08-18_14-21-42.png" class="" title="Snipaste_2020-08-18_14-21-42">
 
 
 
@@ -183,7 +191,7 @@
                                                                         
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="https://blackwhiteblue.github.io/2020/08/18/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" data-id="ckdzl7otv0001f4vvbk3gc5o3" class="article-share-link">
+                                        <a data-url="https://blackwhiteblue.github.io/2020/08/18/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" data-id="ckdznfoq20001n4vv62mg8kma" class="article-share-link">
                                             分享
                                         </a>
                                         
