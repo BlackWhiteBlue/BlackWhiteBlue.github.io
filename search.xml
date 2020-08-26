@@ -21,6 +21,51 @@
 ]]></content>
   </entry>
   <entry>
+    <title>小米手机刷机记录-以小米6为例</title>
+    <url>/2020/08/26/%E5%B0%8F%E7%B1%B3%E6%89%8B%E6%9C%BA%E5%88%B7%E6%9C%BA%E8%AE%B0%E5%BD%95-%E4%BB%A5%E5%B0%8F%E7%B1%B36%E4%B8%BA%E4%BE%8B/</url>
+    <content><![CDATA[<h1 id="小米手机刷机记录-以小米6为例"><a href="#小米手机刷机记录-以小米6为例" class="headerlink" title="小米手机刷机记录-以小米6为例"></a>小米手机刷机记录-以小米6为例</h1><p>本文记录了2020年初给备用机小米6刷机的过程，并不一定是最可靠、最安全的方法。</p>
+<p>刷机有风险！刷前需备份！</p>
+<a id="more"></a>
+
+<h2 id="一、解锁BootLoader"><a href="#一、解锁BootLoader" class="headerlink" title="一、解锁BootLoader"></a>一、解锁BootLoader</h2><p>这是刷机的前提，BL锁的存在会限制用户刷第三方recovery和ROM。  </p>
+<p><a href="http://www.miui.com/unlock/index.html">小米解锁官网</a></p>
+<p>按网站介绍的流程解锁即可。  </p>
+<p>注：小米手机连接电脑时，使用的电脑接口似乎必须是USB 2.0协议的，否则解锁程序可能会识别不出来，导致解锁失败。</p>
+<h2 id="二、刷入第三方recovery"><a href="#二、刷入第三方recovery" class="headerlink" title="二、刷入第三方recovery"></a>二、刷入第三方recovery</h2><h3 id="方法1-fastboot模式刷入（无需root，需要电脑）"><a href="#方法1-fastboot模式刷入（无需root，需要电脑）" class="headerlink" title="方法1.fastboot模式刷入（无需root，需要电脑）"></a>方法1.fastboot模式刷入（无需root，需要电脑）</h3><p>注：电脑以win10为例。</p>
+<p>1.电脑上下载要安装的第三方recovery（rec）文件</p>
+<p><a href="https://twrp.me/Devices">TWRP官网</a> 中搜索下载，下载下来的文件后缀为.img；<br>一些第三方ROM的官网也会主动提供；<br>Github上也有，<a href="https://github.com/xiaomi-msm8998/twrp_device_xiaomi_sagit/releases/tag/3.3.1-20191204">这个适用于安卓10的twrp</a></p>
+<p>2.电脑上下载SDK平台工具</p>
+<p><a href="https://developer.android.google.cn/studio/releases/platform-tools">SDK网站</a><br>下载，解压放在全英文目录，并添加其路径到系统变量；手机开启adb调试。</p>
+<p>3.在手机上长按音量下键和电源键，进入fastboot模式，如图，并连接电脑（似乎也需要USB 2.0口）。</p>
+<p>4.打开解压后的platform-tools文件夹，按“左shift”并右击空白处，在弹出的菜单中点击“在此处打开 Powershell窗口”。<br>在弹出的窗口中输入命令“./fastboot devices”，确认手机连上电脑。<br>再输入“./fastboot flash recovery <recovery_filename>.img(即准备好的rec文件的路径)”。</p>
+<h3 id="方法2-使用-twrp-app刷入（须root，不需电脑）"><a href="#方法2-使用-twrp-app刷入（须root，不需电脑）" class="headerlink" title="方法2.使用 twrp app刷入（须root，不需电脑）"></a>方法2.使用 twrp app刷入（须root，不需电脑）</h3><p>1.获取root权限</p>
+<p>去申请MIUI11开发版或者去<a href="http://www.miui.com/download.html">MIUI网站</a> 下以前的开发版，下载后在手机上安装（在设置-系统更新界面连点MIUI图标数次，再点右上角菜单键，选刷入下好的压缩包），开发版自带root（似乎要在安全中心开启）。</p>
+<p>2.安装TWRP app</p>
+<p>在Google Play或酷安下载“Official TWRP App”并安装，授予其root权限，在其中搜对应机型的rec并刷入。</p>
+<h2 id="三、进入rec模式"><a href="#三、进入rec模式" class="headerlink" title="三、进入rec模式"></a>三、进入rec模式</h2><p>准备：在电脑上下好第三方刷机包，文件后缀为.zip；另外，可下好gapps包（使装的第三方系统具有Google框架及一些Google app），Magisk包（管理手机root权限）。<br>长按手机电源上键和电源键，进入recovery模式。<br>点击“清除”，点击“格式化Data”，按提示操作并重启再次进入rec模式。<br>点击“清除”，点击“高级清除”，选择<em>Dalvik/ART Cache</em>、<em>system</em>、<em>Data</em>以及<em>Cache</em>，并确认清除。<br>把刷机包通过数据线从电脑传到手机上，点击rec主界面的安装，选中该包并刷入；同理，gapps和magisk也是一样的刷法。最后重启进系统即可。</p>
+<h2 id="四、其他"><a href="#四、其他" class="headerlink" title="四、其他"></a>四、其他</h2><p>1.gapps（谷歌框架、商店等的合集）</p>
+<p><a href="https://sourceforge.net/projects/opengapps/files/arm64/">open_gapps</a></p>
+<p>2.Magisk</p>
+<p><a href="https://github.com/topjohnwu/Magisk/releases">Magisk</a></p>
+<p>Magisk可能会刷入失败，此时，进入手机系统，到酷安安装Magisk Manager app，进入，选择安装Magisk，再点“选择并修补一个文件”，所选的文件是，所用的刷机包解压后其中的boot.img文件。修补后会出现一个magisk_patched.img文件，进入rec模式，选“安装”，选“刷入镜像”，选择该文件，然后选Boot分区刷入即可。</p>
+<p>3.底包/固件（Firmware）</p>
+<p>一般，从最新的官方MIUI系统刷第三方包不用管，如果后续官方系统有更新，可在这个网站查看最新底包。  </p>
+<p><a href="https://xiaomifirmwareupdater.com/">xiaomifirmwareupdater</a></p>
+<p>4.后续更新系统的方法</p>
+<p>一种是该第三方系统支持自动更新，那很简单，在设置里点点就好了（比如Lineageos）；另一种是需要自己去查看有无最新的包，然后在按之前的方法刷入即可（进rec清除时简单清除即可）。</p>
+<p>5.一些第三方ROM网站</p>
+<p><a href="https://download.lineageos.org/">Lineageos</a><br><a href="https://download.pixelexperience.org/">Pixel Experience</a><br><a href="https://sourceforge.net/projects/havoc-os/files/">Havoc-OS</a><br><a href="https://dwnld.aicp-rom.com/">AICP-ROM</a><br><a href="https://www.resurrectionremix.com/">Resurrection Remix OS</a><br><a href="https://sagit.sbwml.net/">sbwml (xiaomi 6)</a></p>
+<h2 id="五、（补充）刷回MIUI"><a href="#五、（补充）刷回MIUI" class="headerlink" title="五、（补充）刷回MIUI"></a>五、（补充）刷回MIUI</h2><p>使用过程中，发现第三方ROM还需要自己去配置、去美化、去折腾才能达到好用的效果，但是又没有这么多时间（懒），于是几个月后又刷回了MIUI。</p>
+<p><a href="http://www.miui.com/shuaji-393.html">官方线刷教程</a></p>
+<p>刷机工具和线刷包都在里面下载。</p>
+<p>注意：在这步，手机与电脑连接时也必须是USB 2.0的接口（我用了type-c扩展坞上最低级的USB 3.0口也成功了）。</p>
+<p>PS：在搜索资料过程中发现，有人开发了第三方的刷机工具：<a href="https://lsdy.top/gjzs">搞机助手</a>，这个似乎可以使用更高级别的USB接口（未亲自试验过，不做评价）。</p>
+]]></content>
+      <tags>
+        <tag>刷机</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo的搭建、使用、错误解决（持续更新中）</title>
     <url>/2020/08/18/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</url>
     <content><![CDATA[<p>本文记录了在win10平台下利用Hexo和Github搭建个人博客的过程。</p>
